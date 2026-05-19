@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selection Challenge</title>
+
+    <style>
+        /* Universal selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 60rem;
+            margin: 0 auto;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .grid {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .grid article {
+            width: 50%;
+            padding: 1.5em;
+            border: 1px solid darkgray;
+            border-radius: 8px;
+        }
+
+        .grid article:first-of-type {
+            border: 2px solid gold;
+        }
+
+        .price-tag {
+            font-size: 1.2em;
+            margin: 1em 0;
+        }
+
+        .price-tag > span {
+            font-weight: bold;
+            color: green;
+        }
+
+        h2 + div {
+            color: gray;
+            margin-bottom: 1em;
+        }
+
+        button {
+            padding: 1em 1.5em;
+            border: none;
+            cursor: pointer;
+            background: black;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        .features {
+            margin-top: 2rem;
+            padding: 0;
+        }
+
+        .features li:nth-child(even) {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="container">
+    <h1>TechGadget Comparison</h1>
+
+    <div class="grid">
+        <article>
+            <h2>Standard Model</h2>
+            <div>Perfect for daily use.</div>
+
+            <div class="price-tag">
+                <span>$</span> 99
+                <div>Includes free shipping</div>
+            </div>
+
+            <button>Buy Now</button>
+        </article>
+
+        <article>
+            <h2>Pro Model</h2>
+            <div>For the power users.</div>
+
+            <div class="price-tag">
+                <span>$</span> 199
+            </div>
+
+            <button>Buy Now</button>
+        </article>
+    </div>
+
+    <ul class="features">
+        <li>OLED Display</li>
+        <li>12-hour Battery</li>
+        <li>Water Resistant</li>
+        <li>5G Enabled</li>
+    </ul>
+</main>
+
+</body>
+</html>
